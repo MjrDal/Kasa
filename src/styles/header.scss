@@ -1,0 +1,22 @@
+.header{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 27px 50px 27px;
+    .header_logo{
+        height: 46px;
+    }
+    .header_nav{
+        font-size: 0.8rem;
+        font-weight: 500px;
+        .header_link{
+            text-decoration: none;
+            color: #FF6060; 
+        }
+        .header_link_padding{
+            padding-left: 26px;
+        }
+    }
+}

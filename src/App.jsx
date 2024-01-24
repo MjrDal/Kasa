@@ -1,7 +1,7 @@
-function App() {
+function Rental() {
 
-  return "Bonjour, les gens"
+  return "page de location"
 
 }
 
-export default App
+export default Rental

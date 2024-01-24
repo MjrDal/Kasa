@@ -1,0 +1,18 @@
+.footer{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 120px 58px 120px;
+    .footer_logo{
+        height: 39px;
+        filter: brightness(0) invert(1);
+        padding-bottom: 20px;
+    }
+    .footer_txt{
+        color: #FFFFFF;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
