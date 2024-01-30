@@ -2,9 +2,19 @@
   width: 335px;
   height: 255px;
   border-radius: 10px;
+  list-style-type: none;
+  margin-bottom: 20px;
 }
 .rentalCard .rentalCard_img {
   width: 335px;
   height: 255px;
   border-radius: 10px;
+}
+.rentalCard span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  bottom: 50px;
+  left: 20px;
 }/*# sourceMappingURL=rentalCard.css.map */

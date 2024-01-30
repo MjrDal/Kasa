@@ -1,0 +1,115 @@
+.rental {
+  padding: 0 19px 0 19px;
+  .rental_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .slideshow {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .rental_img {
+        width: 100%;
+        height: 255px;
+        border-radius: 10px;
+      }
+      .arrows {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        position: relative;
+        top: 140px;
+        .fa-chevron-right {
+          font-size: 30px;
+          color: #000;
+          padding-right: 10px;
+        }
+        .fa-chevron-left {
+          font-size: 30px;
+          color: #000;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .rental_description {
+      width: 100%;
+      .rental_title {
+        display: flex;
+        flex-direction: column;
+        .title {
+          width: 100%;
+          h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #ff6060;
+          }
+          p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+          }
+          .tags {
+            display: flex;
+            flex-direction: row;
+            .tag {
+              background-color: #ff6060;
+              border-radius: 10px;
+              margin-right: 10px;
+              padding: 5px 20px 5px 20px;
+              color: #fff;
+              font-size: 10px;
+              font-weight: 700;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .rental_host {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        .rental_name {
+          display: flex;
+          flex-direction: row;
+          .name {
+            font-size: 12px;
+            font-weight: 500;
+            color: #ff6060;
+          }
+          .picture {
+            width: 32px;
+            height: 32px;
+            border-radius: 18px;
+          }
+        }
+        .stars {
+          color: #e3e3e3;
+        }
+      }
+    }
+  }
+}
+.rental_description {
+  width: 100%;
+  .collaps {
+    width: 100%;
+    .collaps_link {
+      background-color: #ff6060;
+      border-radius: 5px;
+      max-width: 1023px;
+      height: 30px;
+      margin-bottom: 20px;
+      padding: 0 10px 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+  }
+}

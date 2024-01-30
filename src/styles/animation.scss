@@ -1,0 +1,52 @@
+.clockwise_rotation {
+  animation: clockwise_rotation 500ms ease-in-out 100ms both;
+}
+
+.translate {
+  animation: translate_animation 500ms ease-in-out 100ms both;
+  padding: 10px 0 10px 0;
+}
+
+.clockwise_rotation_reverse {
+  animation: clockwise_rotation_reverse 500ms ease-in-out 100ms both;
+}
+
+.translate_reverse {
+  animation: translate_animation_reverse 500ms ease-in-out 100ms both;
+}
+
+@keyframes clockwise_rotation {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: (180deg);
+  }
+}
+
+@keyframes translate_animation {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(115px);
+  }
+}
+
+@keyframes clockwise_rotation_reverse {
+  from {
+    rotate: (180deg);
+  }
+  to {
+    rotate: 0;
+  }
+}
+
+@keyframes translate_animation_reverse {
+  0% {
+    transform: translateY(115px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

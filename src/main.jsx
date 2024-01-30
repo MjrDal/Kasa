@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header/header.jsx";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Footer from "./components/Footer/footer.jsx";
-import Home from "./pages/Home/home.jsx";
+import Header from "./components/Header/header.jsx";
 import About from "./pages/About/about.jsx";
+import Error from "./pages/Error/error.jsx";
+import Home from "./pages/Home/home.jsx";
 import Rental from "./pages/Rental/rental.jsx";
-import Error from "./components/Error/error.jsx";
 import "./style.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

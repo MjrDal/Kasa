@@ -1,29 +1,22 @@
-import ImgAbout from "../../assets/img-about.svg";
+import CollapseFiabilite from "../../components/Collapse/fiabilite";
+import CollapseRespect from "../../components/Collapse/respect";
+import CollapseSecurite from "../../components/Collapse/securite";
+import CollapseService from "../../components/Collapse/service";
+import "../../styles/about.scss";
 
 function About() {
   return (
     <div className="about">
-      <img src={ImgAbout} alt="" className="about_img" />
+      <div className="about_banner">
+        <div className="about_banner_img"></div>
+      </div>
       <div className="collaps">
-        <div className="collaps_link">
-          <p>Fiabilité</p>
-          <i className="fa-solid fa-chevron-up"></i>
-        </div>
-        <div className="collaps_link">
-          <p>Respect</p>
-          <i className="fa-solid fa-chevron-up"></i>
-        </div>
-        <div className="collaps_link">
-          <p>Service</p>
-          <i className="fa-solid fa-chevron-up"></i>
-        </div>
-        <div className="collaps_link">
-          <p>Sécurité</p>
-          <i className="fa-solid fa-chevron-up"></i>
-        </div>
+        <CollapseFiabilite />
+        <CollapseRespect />
+        <CollapseService />
+        <CollapseSecurite />
       </div>
     </div>
   );
 }
-
 export default About;
