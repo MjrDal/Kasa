@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import CollapseDescription from "../../components/Collapse/description";
 import CollapseEquipements from "../../components/Collapse/equipements";
+import Rating from "../../components/Rating/Rating";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import rentals from "../../datas/db.json";
 import "../../styles/rental.scss";
@@ -12,7 +13,7 @@ function Rental() {
   // ont place dans le tableau l'appartement correspondant à l'id
   const rental = rentals.find((obj) => idRental === obj.id);
   console.log();
-  return (
+  return rental ? (
     <div className="rental">
       <div className="rental_container">
         <Slideshow pictures={rental.pictures} />
@@ -38,11 +39,7 @@ function Rental() {
                   className="picture"
                 />
               </div>
-              <div className="stars">
-                {Array.from({ length: rental.rating }).map((_, index) => (
-                  <i key={index} className="fa-solid fa-star"></i>
-                ))}
-              </div>
+              <Rating rating={rental.rating} />
             </div>
           </div>
         </div>
@@ -53,6 +50,8 @@ function Rental() {
         </div>
       </div>
     </div>
+  ) : (
+    <Navigate to="/error" replace={true} />
   );
 }
 

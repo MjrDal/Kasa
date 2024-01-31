@@ -1,3 +1,41 @@
+@media (min-width: 780px) {
+  .header_nav a {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .container_card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .error_title {
+    font-size: 288px;
+  }
+  .error_description {
+    font-size: 36px;
+  }
+  .about_banner {
+    height: 223px;
+  }
+  .collaps_link {
+    height: 54px;
+  }
+  .rental_title {
+    flex-direction: row;
+  }
+  .rental_title .rental_host {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1135px) {
+  .container_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
 .about {
   display: flex;
   flex-direction: column;
@@ -7,17 +45,55 @@
 .about .about_img {
   width: 100%;
 }
+.about .about_banner {
+  width: 100%;
+  max-width: 1240px;
+  height: 111px;
+  margin-bottom: 20px;
+  background-image: url("../assets/img-about.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+.about .about_banner .about_banner_img {
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .about .collaps {
   width: 100%;
+  max-width: 1023px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 16px;
 }
 .about .collaps .collaps_link {
   background-color: #ff6060;
+  color: #fff;
   border-radius: 5px;
   max-width: 1023px;
   height: 30px;
-  margin-bottom: 20px;
   padding: 0 10px 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 6;
+}
+.about .collaps .collaps_link p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.about .collaps .texte {
+  z-index: 1;
+  position: relative;
+  padding: 0 20px 0 20px;
+}
+.about .collaps .texte .p {
+  position: relative;
+  bottom: 115px;
+  font-size: 18px;
+  font-weight: 400;
 }/*# sourceMappingURL=about.css.map */

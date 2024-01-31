@@ -4,7 +4,7 @@ import "../../styles/rental.scss";
 
 function Slideshow({ pictures }) {
   const [picture, setPicture] = useState(0);
-  console.log(picture);
+  console.log();
 
   // fonction pour faire fonctionner le carrousel vers la droite
   function carrouselRight() {

@@ -1,7 +1,11 @@
+@import "../styles/responcive.scss";
 .rental {
   padding: 0 19px 0 19px;
+  display: flex;
+  justify-content: center;
   .rental_container {
     width: 100%;
+    max-width: 1240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,27 +42,31 @@
 
     .rental_description {
       width: 100%;
+      padding-top: 10px;
       .rental_title {
         display: flex;
         flex-direction: column;
         .title {
           width: 100%;
+          padding-bottom: 10px;
           h3 {
             font-size: 18px;
             font-weight: 500;
             color: #ff6060;
+            padding-bottom: 10px;
           }
           p {
             font-size: 14px;
             font-weight: 500;
             color: #000;
+            padding-bottom: 10px;
           }
           .tags {
             display: flex;
             flex-direction: row;
             .tag {
               background-color: #ff6060;
-              border-radius: 10px;
+              border-radius: 5px;
               margin-right: 10px;
               padding: 5px 20px 5px 20px;
               color: #fff;
@@ -77,10 +85,12 @@
         .rental_name {
           display: flex;
           flex-direction: row;
+          align-items: center;
           .name {
             font-size: 12px;
             font-weight: 500;
             color: #ff6060;
+            padding-right: 10px;
           }
           .picture {
             width: 32px;
@@ -88,8 +98,8 @@
             border-radius: 18px;
           }
         }
-        .stars {
-          color: #e3e3e3;
+        .rating {
+          font-size: 18px;
         }
       }
     }
@@ -99,17 +109,42 @@
   width: 100%;
   .collaps {
     width: 100%;
+    overflow: hidden;
+    padding-bottom: 16px;
     .collaps_link {
       background-color: #ff6060;
+      color: #fff;
       border-radius: 5px;
       max-width: 1023px;
       height: 30px;
-      margin-bottom: 20px;
       padding: 0 10px 0 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: #fff;
+      position: relative;
+      z-index: 6;
+      p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+    .texte {
+      z-index: 1;
+      position: relative;
+      padding: 0 20px 0 20px;
+      .p {
+        position: relative;
+        bottom: 115px;
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
   }
+}
+
+.normal_color {
+  color: #e3e3e3;
+}
+.rating_color {
+  color: #ff6066;
 }
