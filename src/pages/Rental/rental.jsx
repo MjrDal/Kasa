@@ -44,7 +44,7 @@ function Rental() {
           </div>
         </div>
 
-        <div className="rental_description">
+        <div className="rental_collaps">
           <CollapseDescription description={rental.description} />
           <CollapseEquipements equipements={rental.equipments} />
         </div>

@@ -1,4 +1,3 @@
-@import "../styles/responcive.scss";
 .about {
   display: flex;
   flex-direction: column;
@@ -43,7 +42,7 @@
       position: relative;
       z-index: 6;
       p {
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 700;
       }
     }
@@ -58,5 +57,17 @@
         font-weight: 400;
       }
     }
+  }
+}
+
+@media (min-width: 780px) {
+  .about .about_banner {
+    height: 223px;
+  }
+  .about .collaps .collaps_link {
+    height: 52px;
+  }
+  .about .collaps .collaps_link p {
+    font-size: 18px;
   }
 }

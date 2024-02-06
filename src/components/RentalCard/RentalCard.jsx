@@ -5,7 +5,7 @@ import "../../styles/rentalCard.scss";
 function RentalCard({ id, title, cover }) {
   return (
     <li className="rentalCard">
-      <Link to={`/rental/${id}`}>
+      <Link className="rentalCard_link" to={`/rental/${id}`}>
         <img
           className="rentalCard_img"
           src={cover}
