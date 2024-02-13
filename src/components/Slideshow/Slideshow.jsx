@@ -36,6 +36,11 @@ function Slideshow({ pictures }) {
           onClick={() => carrouselLeft()}
         ></i>
       </div>
+      <div className="number">
+        <p>
+          {picture + 1}/{pictures.length}
+        </p>
+      </div>
       <img
         className="rental_img"
         src={pictures[picture]}

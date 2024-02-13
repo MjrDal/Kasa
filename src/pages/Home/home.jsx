@@ -8,10 +8,8 @@ function Home() {
       <div className="container">
         <div className="banner">
           <div className="banner_img">
-            <p>
-              Chez vous,
-              <br /> partout et ailleurs
-            </p>
+            <p>Chez vous,</p>
+            <p>partout et ailleurs</p>
           </div>
         </div>
         <ul className="container_card">

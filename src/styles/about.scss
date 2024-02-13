@@ -22,39 +22,44 @@
       background-color: rgba(0, 0, 0, 0.5);
     }
   }
-  .collaps {
+  .about_collaps {
     width: 100%;
     max-width: 1023px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding-bottom: 16px;
-    .collaps_link {
-      background-color: #ff6060;
-      color: #fff;
-      border-radius: 5px;
-      max-width: 1023px;
-      height: 30px;
-      padding: 0 10px 0 10px;
+    .collaps {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 6;
-      p {
-        font-size: 13px;
-        font-weight: 700;
-      }
-    }
-    .texte {
-      z-index: 1;
-      position: relative;
-      padding: 0 20px 0 20px;
-      .p {
+      flex-direction: column;
+      overflow: hidden;
+      padding-bottom: 16px;
+      .collaps_link {
+        background-color: #ff6060;
+        color: #fff;
+        border-radius: 5px;
+        max-width: 1023px;
+        height: 30px;
+        padding: 0 10px 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
-        bottom: 115px;
-        font-size: 18px;
-        font-weight: 400;
+        z-index: 6;
+        p {
+          font-size: 13px;
+          font-weight: 700;
+        }
+      }
+      .texte {
+        z-index: 1;
+        position: relative;
+
+        width: 100%;
+        .p {
+          position: relative;
+          bottom: 115px;
+          font-size: 18px;
+          font-weight: 400;
+          padding: 0 20px 0 20px;
+          background: var(--Gray, rgba(246, 246, 246, 0.45));
+        }
       }
     }
   }
@@ -64,10 +69,10 @@
   .about .about_banner {
     height: 223px;
   }
-  .about .collaps .collaps_link {
+  .about .about_collaps .collaps .collaps_link {
     height: 52px;
   }
-  .about .collaps .collaps_link p {
+  .about .about_collaps .collaps .collaps_link p {
     font-size: 18px;
   }
 }

@@ -1,13 +1,14 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import "../../styles/about.scss";
 import "../../styles/animation.scss";
 
-function CollapseRespect() {
+function Collapse({ title, contend }) {
   const [isOpen, setIsOpen] = useState(true);
 
   function animateFunction() {
-    const animateId = document.getElementById("animateArrowRespect");
-    const animateTranslateId = document.getElementById("animateTxtRespect");
+    const animateId = document.getElementById(title);
+    const animateTranslateId = document.getElementById(title + "txt");
     if (isOpen === true) {
       setIsOpen(false);
       animateId.classList.remove("clockwise_rotation_reverse");
@@ -26,36 +27,50 @@ function CollapseRespect() {
   return isOpen ? (
     <div className="collaps">
       <div className="collaps_link">
-        <p>Respect</p>
+        <p>{title}</p>
         <i
           className="fa-solid fa-chevron-up"
-          id="animateArrowRespect"
+          id={title}
           onClick={() => animateFunction()}
         ></i>
       </div>
       <div className="texte">
-        <div className="p" id="animateTxtRespect"></div>
+        <div className="p" id={title + "txt"}></div>
       </div>
     </div>
   ) : (
     <div className="collaps">
       <div className="collaps_link">
-        <p>Respect</p>
+        <p>{title}</p>
         <i
           className="fa-solid fa-chevron-up"
-          id="animateArrowRespect"
+          id={title}
           onClick={() => animateFunction()}
         ></i>
       </div>
       <div className="texte">
-        <div className="p" id="animateTxtRespect">
-          La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
-          comportement discriminatoire ou de perturbation du voisinage
-          entrainera une exclusion de notre plateforme.
-        </div>
+        {Array.isArray(contend) ? (
+          <div className="p" id={title + "txt"}>
+            {contend.map((tag, index) => (
+              <li key={index}>{tag}</li>
+            ))}
+          </div>
+        ) : (
+          <div className="p" id={title + "txt"}>
+            {contend}
+          </div>
+        )}
+        {/* <div className="p" id={title + "txt"}>
+          {contend}
+        </div> */}
       </div>
     </div>
   );
 }
 
-export default CollapseRespect;
+Collapse.propTypes = {
+  title: PropTypes.string,
+  contend: PropTypes.node,
+};
+
+export default Collapse;

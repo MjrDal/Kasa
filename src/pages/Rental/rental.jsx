@@ -1,6 +1,5 @@
 import { Navigate, useParams } from "react-router-dom";
-import CollapseDescription from "../../components/Collapse/description";
-import CollapseEquipements from "../../components/Collapse/equipements";
+import Collapse from "../../components/Collapse/Collapse";
 import Rating from "../../components/Rating/Rating";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import rentals from "../../datas/db.json";
@@ -12,7 +11,7 @@ function Rental() {
 
   // ont place dans le tableau l'appartement correspondant à l'id
   const rental = rentals.find((obj) => idRental === obj.id);
-  console.log();
+  console.log(rental.equipments);
   return rental ? (
     <div className="rental">
       <div className="rental_container">
@@ -45,8 +44,8 @@ function Rental() {
         </div>
 
         <div className="rental_collaps">
-          <CollapseDescription description={rental.description} />
-          <CollapseEquipements equipements={rental.equipments} />
+          <Collapse title="Description" contend={rental.description} />
+          <Collapse title="Equipements" contend={rental.equipments} />
         </div>
       </div>
     </div>
