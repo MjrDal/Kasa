@@ -11,7 +11,6 @@ function Rental() {
 
   // ont place dans le tableau l'appartement correspondant à l'id
   const rental = rentals.find((obj) => idRental === obj.id);
-  console.log(rental.equipments);
   return rental ? (
     <div className="rental">
       <div className="rental_container">
